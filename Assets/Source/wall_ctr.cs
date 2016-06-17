@@ -14,7 +14,14 @@ public class wall_ctr : MonoBehaviour {
 	public void create()
 	{
 		wall = (GameObject)Instantiate (prefab_wall.gameObject, position, Quaternion.identity);
-		wall.transform.Rotate (rotation,Space.Self);
+		wall.transform.Rotate (rotation);
+	}
+
+	public void set_pos_rot(Vector3 pos,Vector3 rot)
+	{
+		wall.transform.position = pos;
+		//wall.transform.Rotate(rot);
+		wall.transform.rotation = Quaternion.Euler(0.0f,0.0f,rot.z);
 	}
 
 	public void set_rot(Vector3 target)
