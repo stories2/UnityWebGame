@@ -45,10 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Source\block_ctr.cs" />
      <Compile Include="Assets\Source\cam_ctr.cs" />
      <Compile Include="Assets\Source\io_ctr.cs" />
      <Compile Include="Assets\Source\main_proc.cs" />
      <Compile Include="Assets\Source\player.cs" />
+     <Compile Include="Assets\Source\queue_block.cs" />
      <Compile Include="Assets\Source\wall_ctr.cs" />
      <Compile Include="Assets\mmd-for-unity-proj-mmd-for-unity-de6d097\Resources\ExpressionManagerScript.cs" />
      <Compile Include="Assets\mmd-for-unity-proj-mmd-for-unity-de6d097\Resources\IK\BoneController.cs" />

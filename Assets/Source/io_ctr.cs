@@ -3,11 +3,12 @@ using System.Collections;
 
 public class io_ctr : MonoBehaviour {
 
-	int degree,movement;
+	int degree,movement,status;
 
 	// Use this for initialization
 	void Start () {
 	
+		status = 0;
 	}
 
 	public void set_movement(int movement)
@@ -24,6 +25,16 @@ public class io_ctr : MonoBehaviour {
 	{
 		this.degree = degree;
 	}
+
+	public void set_status(int status)
+	{
+		this.status = status;
+	}
+
+	public int get_status()
+	{
+		return status;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,12 +44,15 @@ public class io_ctr : MonoBehaviour {
 
 	public void io()
 	{	
+		status = 0;
 		if (Input.GetKey (KeyCode.RightArrow)) 
 		{
+			status = 1;
 			degree = degree - movement;
 		}
 		if (Input.GetKey (KeyCode.LeftArrow)) 
 		{
+			status = 2;
 			degree = degree + movement;
 		}
 	}

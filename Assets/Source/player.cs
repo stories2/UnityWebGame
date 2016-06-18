@@ -10,6 +10,11 @@ public class player : MonoBehaviour {
 	
 	}
 
+	public void update_rot(Vector3 target)
+	{
+		playground_miku.transform.rotation = Quaternion.Euler(0.0f,target.y,0.0f);
+	}
+
 	public void create()
 	{
 		playground_miku = (GameObject)Instantiate (miku.gameObject, position, Quaternion.identity);
